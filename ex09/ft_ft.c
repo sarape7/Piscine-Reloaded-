@@ -6,7 +6,7 @@
 /*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 19:08:18 by sarperez          #+#    #+#             */
-/*   Updated: 2023/09/28 19:27:50 by sarperez         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:18:53 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@ void	ft_ft(int	*nbr)
 
 int	main(void)
 {
-	int num;
+	int	num;
 
 	num = 100;
-
 	ft_ft(&num);
 	printf("%d\n", num);
 	return (0);

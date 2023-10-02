@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 20:35:07 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/02 17:29:01 by sarperez         ###   ########.fr       */
+/*   Created: 2023/09/29 18:44:51 by sarperez          #+#    #+#             */
+/*   Updated: 2023/10/02 17:41:41 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include<string.h>
 #include<unistd.h>
+#include<stdio.h>
 
-void	ft_div_mod(int a, int b, int	*div, int	*mod);
+int	ft_strlen(char *str);
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strlen(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	cont;
+
+	cont = 0;
+	while (*str != '\0')
+	{
+		cont = cont + 1;
+		str++;
+	}
+	return (cont);
 }
 /*
 int main()
 {
-	int a;
-	int b;
-	int	div;
-	int	mod;
-
-	a = 15;
-	b = 5;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d\n,%d\n", div, mod);
+	printf("%d\n", ft_strlen("Hola"));
 }*/

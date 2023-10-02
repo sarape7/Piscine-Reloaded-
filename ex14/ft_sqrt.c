@@ -3,42 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sarperez <sarperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 13:27:44 by sarperez          #+#    #+#             */
-/*   Updated: 2023/09/29 17:21:40 by sarperez         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:37:09 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//Empiezo suponiendo que el resultado es 1. Recalco que para <= 0 no. Epsilon para ver cuando me he acercado lo suficiente. Diff para ver la differencia. En el bucle hacemos valor absoluto. a la formula para hallarla. %f para sacar numeros decimales
-#include<unistd.h>
-#include<stdio.h>
 
-double	ft_sqrt(double nb);
-double	ft_sqrt(double nb)
+#include <stdio.h>
+
+int	ft_sqrt(int nb);
+
+int	ft_sqrt(int nb)
 {
-	double a;
+	int	a;
 
-	a = 1.0;
-
-	if(nb <= 0)
-		return(0);
-	else
+	if (nb <= 0)
+		return (0);
+	a = 1;
+	while (a * a <= nb)
 	{
-		double epsilon;
-		double diff;
-
-		diff = a* a -nb;
-		epsilon	= 0.001;
-		while(diff > epsilon || diff < -epsilon)
-		{
-			a = (a + nb / a)/ 2;
-			diff = a* a - nb;
-		}
-	return (a);
+		if (a * a == nb)
+			return (a);
+		a++;
 	}
-}
-int main()
-{
-	printf("%f/n", ft_sqrt(4));
 	return (0);
 }
+/*
+int main()
+{
+	int	result = ft_sqrt(4);
+	printf("Raíz cuadrada de 4: %d\n", result);
+	int	res = ft_sqrt(15);
+	printf("Raíz cuadrada de 4: %d\n", res);
+
+	return (0);
+}*/

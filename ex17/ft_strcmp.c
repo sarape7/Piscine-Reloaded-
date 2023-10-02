@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 20:35:07 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/02 17:29:01 by sarperez         ###   ########.fr       */
+/*   Created: 2023/09/29 19:06:52 by sarperez          #+#    #+#             */
+/*   Updated: 2023/10/02 17:43:31 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<unistd.h>
+#include<string.h>
 
-void	ft_div_mod(int a, int b, int	*div, int	*mod);
+int	ft_strcmp(char *s1, char *s2);
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strcmp(char *s1, char *s2)
 {
-	*div = a / b;
-	*mod = a % b;
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 /*
-int main()
+int	main()
 {
-	int a;
-	int b;
-	int	div;
-	int	mod;
+	char	*str1 = "Sara";
+	char	*str2 = "Sar";
 
-	a = 15;
-	b = 5;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d\n,%d\n", div, mod);
+	printf("Original: %i\n", strcmp(str1, str2));
+	printf("Casera: %i\n", ft_strcmp(str1, str2));
 }*/

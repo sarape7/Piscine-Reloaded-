@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 20:35:07 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/02 17:29:01 by sarperez         ###   ########.fr       */
+/*   Created: 2023/09/29 17:29:23 by sarperez          #+#    #+#             */
+/*   Updated: 2023/10/02 17:39:08 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 #include<unistd.h>
+#include<stdio.h>
+#include<string.h>
 
-void	ft_div_mod(int a, int b, int	*div, int	*mod);
+void	ft_putstr(char	*str);
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putstr(char	*str)
 {
-	*div = a / b;
-	*mod = a % b;
+	while (*str != '\0')
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
 /*
-int main()
+int main ()
 {
-	int a;
-	int b;
-	int	div;
-	int	mod;
-
-	a = 15;
-	b = 5;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d\n,%d\n", div, mod);
+	ft_putstr( "Hello");
+	return (0);
 }*/
