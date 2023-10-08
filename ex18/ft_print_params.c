@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sarperez <sarperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 11:21:04 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/02 17:50:00 by sarperez         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:56:33 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	ft_print_params(int argc, char	*argv[], int index)
 		ft_print_params(argc, argv, index + 1);
 	}
 }
-/*
-int main(int argc, char *argv[])
+
+int	main(int argc, char *argv[])
 {
 	ft_print_params(argc, argv, 1);
 	return (0);
-}*/
+}

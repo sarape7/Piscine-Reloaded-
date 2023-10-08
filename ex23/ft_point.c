@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_point.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarperez <sarperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 12:55:56 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/05 13:22:11 by sarperez         ###   ########.fr       */
+/*   Created: 2023/10/06 13:41:15 by sarperez          #+#    #+#             */
+/*   Updated: 2023/10/06 14:19:36 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-#define FT_ABS_H
-#define ABS(Value) ((Value < 0 ) ? -Value : Value)
-#endif
-/*
-#include<stdio.h>
-#include<stddef.h>
+#include "ft_point.h"
+#include <stdio.h>
 
+void	set_point(t_point	*point);
 
-int	ft_abs(int Value);
-
-int	ft_abs(int Value)
+void	set_point(t_point	*point)
 {
-	if (Value >= 0)
-		return (Value)
-	else
-	{
-		Value = Value * (-1);
-		return (Value);
-	}
+	point->x = 42;
+	point->y = 21;
 }
 
-int	main()
+int	main(void)
 {
-	int	value;
+	t_point		point;
 
-	value = 5;
-	ft_abs(value);
+	set_point (&point);
+//  printf("%i\n", point.x);
+//  printf("%i\n", point.y);
+	return (0);
 }
-*/
