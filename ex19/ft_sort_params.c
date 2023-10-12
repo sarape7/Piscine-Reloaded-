@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarperez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sarperez <sarperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 12:36:16 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/02 18:03:19 by sarperez         ###   ########.fr       */
+/*   Updated: 2023/10/12 11:24:54 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include<stdio.h>
 #include <unistd.h>
 
-int	custom_strcmp(const char *str1, const char *str2)
+int	strcmp(const char *str1, const char *str2)
 {
 	while (*str1 && *str2 && *str1 == *str2)
 	{
@@ -24,7 +24,7 @@ int	custom_strcmp(const char *str1, const char *str2)
 	return (*str1 - *str2);
 }
 
-void	custom_bubble_sort(char *arr[], int n)
+void	bubble_sort(char *arr[], int n)
 {
 	int		i;
 	int		j;
@@ -38,7 +38,7 @@ void	custom_bubble_sort(char *arr[], int n)
 		swapped = 0;
 		while (j < n - i + 1)
 		{
-			if (custom_strcmp(arr[j - 1], arr[j]) > 0)
+			if (strcmp(arr[j - 1], arr[j]) > 0)
 			{
 				temp = arr[j - 1];
 				arr[j - 1] = arr[j];
@@ -53,7 +53,7 @@ void	custom_bubble_sort(char *arr[], int n)
 	}
 }
 
-void	custom_putstr(const char	*str)
+void	putstr(const char	*str)
 {
 	int	i;
 
@@ -71,11 +71,11 @@ void	ft_sort_params(int argc, char	*argv[])
 
 	if (argc > 2)
 	{
-		custom_bubble_sort(&argv[1], argc - 1);
+		bubble_sort(&argv[1], argc - 1);
 		index = 1;
 		while (index < argc)
 		{
-			custom_putstr(argv[index]);
+			putstr(argv[index]);
 			write(1, "\n", 1);
 			index++;
 		}

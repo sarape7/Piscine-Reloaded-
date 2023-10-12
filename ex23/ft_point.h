@@ -6,7 +6,7 @@
 /*   By: sarperez <sarperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 12:01:01 by sarperez          #+#    #+#             */
-/*   Updated: 2023/10/06 14:01:19 by sarperez         ###   ########.fr       */
+/*   Updated: 2023/10/12 11:32:52 by sarperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
-typedef struct s_list
+typedef struct s_point
 {
 	int	x;
 	int	y;
-}					t_point;
+}t_point;
 
 #endif
